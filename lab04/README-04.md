@@ -7,6 +7,23 @@ Este notebook integra um modelo de linguagem (LLM) para explicar cenários hidro
 ## Funcionalidades Principais
 
 - **Configuração LLM**: Cliente OpenAI apontando para endpoint Llama 3.1-8B, com chave de API.
+```
+BASE_URL = ""
+API_KEY = ""
+MODEL_NAME = ""
+```
+Vamos buscar a configuração anterior seguindo os próximos passos.
+
+![CAI Home](img/model_endpoints01.png)
+Clique em Model Endpoints
+
+![CAI Model Endpoints](img/model_endpoints02.png)
+Clique no modelo que vamos usar - llama-31-8b
+
+![CAI Home](img/model_endpoints01.png)
+Clique em Model Endpoints
+
+
 
 - **Modelo de Risco**: Reutiliza funções dos labs anteriores para calcular scores.
 

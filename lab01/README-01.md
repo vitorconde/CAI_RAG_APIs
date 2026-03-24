@@ -19,6 +19,57 @@ Este notebook foca na exploração e visualização inicial dos dados de chuva c
   - Adiciona títulos, labels e valores nas barras.
   - Salva o gráfico como imagem (opcional).
 
+- **[Adicional] Lista ordenada de nomes de estações**:
+```
+stations = sorted(df["station_name"].dropna().unique())
+
+for s in stations:
+    print(s)
+```
+
+- **[Adicional] Comparação do total com estação escolhida**:
+```
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# garantir que é numérico
+df["value"] = pd.to_numeric(df["value"], errors="coerce")
+df = df.dropna(subset=["value"])
+
+# escolher estação específica
+station_name = "Indiaporã - SP"
+
+station_row = df[df["station_name"] == station_name]
+
+if len(station_row) == 0:
+    print("Estação não encontrada")
+else:
+    station_value = station_row["value"].iloc[0]
+
+    plt.figure(figsize=(10, 6))
+
+    # histograma geral
+    plt.hist(df["value"], bins=30)
+
+    # linha da estação
+    plt.axvline(
+        station_value,
+        linestyle="--",
+        linewidth=2,
+        label=f"{station_name}: {station_value:.2f} mm"
+    )
+
+    plt.title("Distribuição de Chuva com Destaque de Estação")
+    plt.xlabel("Chuva (mm)")
+    plt.ylabel("Quantidade de estações")
+
+    plt.legend()
+    plt.grid(axis="y", linestyle="--", alpha=0.5)
+
+    plt.tight_layout()
+    plt.show()
+```
+
 ## Estrutura do Código
 
 1. **Importações**: `requests`, `pandas`, `matplotlib.pyplot`.

@@ -1,6 +1,13 @@
 # Lab 02: Modelo de Risco Real
 
-## Descrição
+## Descrição de Negócio
+
+Este modelo avalia o risco de cada estação, combinando dois fatores principais: quanto choveu e quão alto está o nível de água.
+`risc_score = (rain_score * w1) + (level_score * w2)`
+Onde rain_score é a normalização de precipitação observada em relação ao máximo da janela temporal.
+E level_score é a razão entre o nível atual e os thresholds hidrológicos (atenção, alerta, emergência, extravasamento).
+
+## Descrição Tecnica
 
 Este notebook implementa um modelo de risco hidrológico combinando dados de chuva e níveis de água. Ele calcula scores de risco baseados em ratios entre níveis atuais e referências críticas (atenção, alerta, emergência, extravasamento), integrando precipitação para uma avaliação abrangente.
 
