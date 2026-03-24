@@ -48,37 +48,74 @@ Certifique-se de ter um ambiente Python configurado.
 ## Acessando o CAI
 Utilizando o link disponibilizado na planilha faça login com seu usuário e senha na plataforma.
 __Use navegador anônimo__
-![CAI Home](../img/cai_login.png)
+![CAI Home](img/cai_login.png)
 
 Então você vai ter a visão de todos os componentes da Cloudera.
-![CAI Home](../img/cai_home.png)
+![CAI Home](img/cai_home.png)
 
 Clique em Cloudera AI.
-![CAI Home](../img/cloudera_ai.png)
+![CAI Home](img/cloudera_ai.png)
 
 Você estará na Home do Cloudera AI, aqui você poderá acessar nos labs futuros as LLMs.
 Agora vamos acessar nosso Workbench. __Clique em AI Workbenches__
-![CAI Home](../img/cloudera_ai-workbench01.png)
+![CAI Home](img/cloudera_ai-workbench01.png)
 
 Acesse nosso Workbench __uma nova aba deve abrir__.
-![CAI Home](../img/cloudera_ai-workbench02.png)
+![CAI Home](img/cloudera_ai-workbench02.png)
 
 Esta é a home do nosso Workbench.
-![CAI Home](../img/cloudera_ai-workbench03.png)
+![CAI Home](img/cloudera_ai-workbench03.png)
 
 ## Clonando Projeto
 
 Vamos agora criar um novo projeto, para clonar os dados deste laboratório nele.
 __Copie a URL do nosso lab__
-![CAI Home](../img/cloudera_ai-new_project01.png)
+![CAI Home](img/cloudera_ai-new_project01.png)
 
+- Coloque um nome para o Projeto.
+`SPAguas Analytics - ML & GenAI`
+- Adicione uma descrição ao Projeto.
+`Projeto para exploração de dados, coleta de dados, análises simples e avançadas, e interação com LLM`
+- Clique em Git.
+- E por ultimo adicione a URL do nosso git no campo HTTPS.
+`https://github.com/vitorconde/CAI_RAG_APIs`
+![CAI Home](img/cloudera_ai-new_project02.png)
 
-![CAI Home](../img/cloudera_ai-new_project02.png)
+Podemos ver algumas opções de Runtimes para serem configuradas, tanto nas versões de Editores quanto de Kernel, Uso de GPU ou Não, e Versões.
+***Porém não vamos alterar nada disso agora.***
+![CAI Home](img/cloudera_ai-new_project03.png)
 
+- Clique em Create Project.
 
 ## Criando Sessão de ML
 
+Na tela do projeto, poderemos visualizar tanto o Readme, quanto os arquivos do nosso projeto.
+![CAI Home](img/cloudera_ai-new_project04.png)
+É bom verificar se está tudo lá.
 
+E então podemos criar nossa sessão para processar e analisar nossos dados.
+![CAI Home](img/cloudera_ai-new_project05.png)
 
+As configurações da Sessão devem ser:
+Session Name: `<seu_user>-sess`
 
-Este projeto demonstra uma pipeline completa de dados meteorológicos até aplicações de IA conversacional.
+Runtime: Editor -> JupyterLab
+         Kernel -> Python 3.10
+         Edition -> Standard
+
+Não vamos utilizar Spark nem GPU neste projeto por enquanto.
+![CAI Home](img/cloudera_ai-new_project06.png)
+
+- Clique em Start Session.
+
+Temos algumas sugestões de códigos para serem utilizados, a própria plataforma da essas sugestões/snippets para o usuário.
+![CAI Home](img/cloudera_ai-new_project07.png)
+
+- Clique em Close.
+
+E agora você está pronto para começar os laboratórios.
+Volte para o Laboratório 00 e comece a realizar os exercícios.
+Leia atentamente os exercícios e as explicações, e caso tenha dúvidas pergunte!
+![CAI Home](img/cloudera_ai-new_project08.png)
+
+Obrigado!
