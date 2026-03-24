@@ -14,7 +14,7 @@ MODEL_NAME = ""
 ```
 Vamos buscar a configuração anterior seguindo os próximos passos.
 
-![CAI Home](img/model_endpoints01.png)
+![CAI Home](../img/model_endpoints01.png)
 Clique em Model Endpoints
 
 ![CAI Model Endpoints](img/model_endpoints02.png)
