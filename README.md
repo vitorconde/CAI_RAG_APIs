@@ -29,10 +29,6 @@ Aqui está a lista de todos os notebooks Jupyter no projeto, com uma breve descr
 7. **lab99/99-teste-PIB-Analysis.ipynb** [Detalhes](lab99/README-99.md)  
    Notebook de teste para análise de dados de PIB (Produto Interno Bruto). Possivelmente um experimento separado ou teste de integração com dados econômicos.
 
-## Dados
-
-- **data/dados_chuva.csv**: Arquivo CSV contendo os dados de chuva extraídos e processados, pronto para análise.
-
 ## Dependências
 
 O projeto utiliza as seguintes bibliotecas Python, listadas em `requirements.txt`:
@@ -47,10 +43,42 @@ Para instalar as dependências, execute: `pip install -r requirements.txt`.
 
 Certifique-se de ter um ambiente Python configurado.
 
-## Como Usar
+# Como Usar
 
-1. Execute os notebooks em ordem sequencial, começando pelo 00 para extração de dados.
-2. Ajuste parâmetros de API conforme necessário (ex.: horas de medição).
-3. Para os notebooks com LLMs, configure as chaves de API apropriadas.
+## Acessando o CAI
+Utilizando o link disponibilizado na planilha faça login com seu usuário e senha na plataforma.
+__Use navegador anônimo__
+![CAI Home](../img/cai_login.png)
+
+Então você vai ter a visão de todos os componentes da Cloudera.
+![CAI Home](../img/cai_home.png)
+
+Clique em Cloudera AI.
+![CAI Home](../img/cloudera_ai.png)
+
+Você estará na Home do Cloudera AI, aqui você poderá acessar nos labs futuros as LLMs.
+Agora vamos acessar nosso Workbench. __Clique em AI Workbenches__
+![CAI Home](../img/cloudera_ai-workbench01.png)
+
+Acesse nosso Workbench __uma nova aba deve abrir__.
+![CAI Home](../img/cloudera_ai-workbench02.png)
+
+Esta é a home do nosso Workbench.
+![CAI Home](../img/cloudera_ai-workbench03.png)
+
+## Clonando Projeto
+
+Vamos agora criar um novo projeto, para clonar os dados deste laboratório nele.
+__Copie a URL do nosso lab__
+![CAI Home](../img/cloudera_ai-new_project01.png)
+
+
+![CAI Home](../img/cloudera_ai-new_project02.png)
+
+
+## Criando Sessão de ML
+
+
+
 
 Este projeto demonstra uma pipeline completa de dados meteorológicos até aplicações de IA conversacional.

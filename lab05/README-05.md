@@ -7,12 +7,24 @@ Este notebook implementa um sistema de chat conversacional alimentado por LLM, u
 ## Funcionalidades Principais
 
 - **Configuração LLM**: Cliente OpenAI para Llama 3.1-8B via Cloudera.
+Utilizaremos a mesma configuração do lab anterior. ***Lembre-se de reativar seu token***
 
 - **Coleta de Dados**: Funções para baixar chuva e níveis, similar aos labs anteriores.
 
 - **Modelo de Risco**: Calcula scores combinados de chuva e nível.
 
 - **Chat Interativo**: (Código sugere setup para loop de chat, embora não mostrado completamente; presume integração de contexto em conversas).
+
+Você poderá perguntar coisas como:
+```
+“Quais estações estão em maior risco?”
+“Existe alguma estação com chuva alta e nível baixo?”
+“Quais cidades parecem mais preocupantes?”
+“Explique a diferença entre as 3 estações mais críticas.”
+“Há indício de extravasamento?”
+```
+Extra:
+`"Agora explique para um leigo."`
 
 ## Estrutura do Código
 

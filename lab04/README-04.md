@@ -15,14 +15,17 @@ MODEL_NAME = ""
 Vamos buscar a configuração anterior seguindo os próximos passos.
 
 ![CAI Home](../img/model_endpoints01.png)
-Clique em Model Endpoints
+Clique em Model Endpoints.
 
-![CAI Model Endpoints](img/model_endpoints02.png)
-Clique no modelo que vamos usar - llama-31-8b
+![CAI Model Endpoints](../img/model_endpoints02.png)
+Clique no modelo que vamos usar - llama-31-8b.
 
-![CAI Home](img/model_endpoints01.png)
-Clique em Model Endpoints
+![CAI Home](../img/model_endpoints03.png)
+Pegue o **MODEL_NAME** no item chamado **MODEL ID**, e o **BASE_URL** será o nosso **ENDPOINT BASE URL**.
 
+![CAI Home](../img/model_endpoints04.png)
+Por ultimo nosso **API_KEY** será a variável do botão __Code Sample__ -> __Copy CDP Token__
+__Nosso token expira por segurança em alguns minutos, portanto será importante sempre utilizar esse botão para pegar uma nova credencial do serviço de inferência__
 
 
 - **Modelo de Risco**: Reutiliza funções dos labs anteriores para calcular scores.
@@ -33,6 +36,22 @@ Clique em Model Endpoints
 - **Explicação**:
   - `explain_events_with_llm()`: Monta prompt pedindo análise simples, destaques críticos, razões de preocupação e diferenças entre chuva e nível.
   - Envia para LLM e retorna resposta.
+
+Estamos enviando um prompt pré formatado para a LLM, assim ela conseguirá ter um contexto (os dados), e responder as questões.
+Podemos alterar as questões para responder perguntas específicas.
+```
+Você é um analista hidrológico.
+
+Com base apenas nos dados abaixo:
+- explique o cenário atual de forma simples;
+- destaque estações críticas;
+- diga por que elas parecem preocupantes;
+- aponte diferenças entre chuva alta e nível alto;
+- não invente informação fora do contexto.
+
+Contexto:
+{context}
+```
 
 ## Estrutura do Código
 
