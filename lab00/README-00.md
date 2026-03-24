@@ -13,6 +13,24 @@ Este notebook inicia o projeto com a extração de dados de precipitação da AP
   - `serializer`: "complete" (dados detalhados).
   - `public`: "true" (dados públicos).
 
+```
+url = "https://apps.spaguas.sp.gov.br/sibh/api/v2/measurements/now"
+
+params = {
+    "station_type_id": 1,
+    "hours": 1,              # 1 até 72
+    "show_all": "false",     # true ou false
+    "serializer": "complete",# complete ou simplify
+    "public": "true"         # true ou false
+}
+
+response = requests.get(url, params=params, timeout=30)
+response.raise_for_status()
+
+data = response.json()
+
+```
+
 - **Processamento de Dados**: Converte a lista de medições em um DataFrame pandas com `pd.json_normalize()`, facilitando a manipulação.
 
 - **Salvamento de Dados**:
